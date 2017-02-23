@@ -1,9 +1,11 @@
 package app.zsound.Adapter;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -46,7 +48,7 @@ public class SomAdapter extends BaseAdapter {
 
         View view = activity.getLayoutInflater().inflate(R.layout.lista_sons, viewGroup, false);
 
-        Som som = sons.get(i);
+        final Som som = sons.get(i);
 
         TextView tvDescricao = (TextView)view.findViewById(R.id.tvDescricao);
         tvDescricao.setText(som.getDescricao());
